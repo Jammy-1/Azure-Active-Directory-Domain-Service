@@ -58,31 +58,31 @@ Rename terraform.tfvars.example to terraform.tfvars and update only the values b
 ```
 AADDS Settings
 
-resource_group_name = "rg-aadds"
-location = "UK West"
-aadds_name = "example-aadds"
-domain_name = "example.co.uk"
-sku = "Enterprise"
+# General
+resource_group = "RG-AAD-MST"
+location       = "UKWEST"
+
+# Azure AD Domain Services
+aadds_name            = "AADS Project"
+domain_name           = "example-domain.co.uk"
+sku                   = "Enterprise"
 filtered_sync_enabled = false
-subnet_id = module.network.subnet_ids["subnet-AADS"]
 
 # DC Admin Account
+dc_admin_upn          = "dcadmin@example-domain.co.uk"
+dc_admin_display_name = "Example-Username"
+dc_admin_password     = "example-password"
 
-dc_admin_upn = "dcadmin@example.co.uk"
-dc_admin_display_name = "AAD DS Admin"
-dc_admin_password = "Example-Password"
 
-Notifications
+# Notifications
+additional_recipients = ["alerts@example-domain.co.uk"]
+notify_dc_admins      = true
+notify_global_admins  = true
 
-additional_recipients = ["alerts@example.co.uk]
-notify_dc_admins = true
-notify_global_admins = true
-
-Password Sync
-
+# Password Sync
 sync_kerberos_passwords = true
-sync_ntlm_passwords = true
-sync_on_prem_passwords = true
+sync_ntlm_passwords     = true
+sync_on_prem_passwords  = true
 ```
 
 ### 3. Initialize Terraform

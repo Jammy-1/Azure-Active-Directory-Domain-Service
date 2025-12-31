@@ -22,6 +22,7 @@
 Infrastructure Overview
 Azure infrastructure is structured as follows:
 
+```
 Resource Group: rg-aadds
 └── Virtual Network: vnet-aadds
 ├── Subnet: subnet-AADS (AADDS-enabled)
@@ -33,6 +34,7 @@ Resource Group: rg-aadds
 ├── DC Administrator: dcadmin@example.co.uk
 ├── Notifications: Alerts to specified email addresses
 └── Password synchronization enabled for Kerberos, NTLM and on-prem
+```
 
 ## Details
 

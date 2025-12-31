@@ -19,8 +19,9 @@
 - Configures notifications for domain service events and admin alerts.
 - Outputs key deployment information such as managed domain name, subnet ID and DNS servers.
 
-Infrastructure Overview
-Azure infrastructure is structured as follows:
+## Infrastructure Overview
+
+Azure infrastructure is structured:
 
 ```
 Resource Group: rg-aadds
